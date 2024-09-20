@@ -20,6 +20,7 @@ questions = [
 
 
 def run_quiz(questions, time_limit):
+    
     score = 0
     for question in questions:
         print(question["prompt"])
