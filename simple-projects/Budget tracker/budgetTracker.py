@@ -46,3 +46,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# This code represents a simple budget app that allows users to:
+
+# Add expenses: Users input the description and amount, which are stored in a list.
+# Calculate total expenses: It sums up all expenses.
+# Calculate remaining budget: The total expenses are subtracted from the initial budget.
+# Show budget details: It displays the total budget, each expense, total spent, and remaining balance.
+# User interaction: A simple menu allows users to add expenses, view the budget, or exit.
+# The code loops until the user decides to exit.
