@@ -39,7 +39,7 @@ def save_budget_data(filePath, initial_budget, expences):
 
 def main():
     print("Welcome to the Budget App")
-    filePath = 'budget_data.json'
+    filePath = 'simple-projects/Budget tracker/budget_data.json'
     
     # Load data from the file if available
     initial_budget, expences = load_budget_data(filePath)
