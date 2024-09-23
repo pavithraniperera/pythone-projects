@@ -1,8 +1,10 @@
 import json
 
+
 def add_expense(expences, description, amount):
     expences.append({"description": description, "amount": amount})
     print(f"Added expense: {description}, Amount: {amount}")
+
 
 def get_Total_expences(expences):
     total = 0
@@ -10,8 +12,10 @@ def get_Total_expences(expences):
         total += expence["amount"]
     return total
 
+
 def get_balance(budget, expences):
     return budget - get_Total_expences(expences)
+
 
 def show_budget_details(budget, expences):
     print(f"Total budget: {budget}")
@@ -20,7 +24,8 @@ def show_budget_details(budget, expences):
         print(f" .{expence['description']}: {expence['amount']}")
     print(f"Total spent: {get_Total_expences(expences)}")
     print(f"Remaining budget: {get_balance(budget, expences)}")
-    
+
+
 def load_budget_data(filePath):
     try:
         with open(filePath, "r") as file:
@@ -29,21 +34,20 @@ def load_budget_data(filePath):
     except (FileNotFoundError, json.JSONDecodeError):
         return 0, []
 
+
 def save_budget_data(filePath, initial_budget, expences):
-    data = {
-       "initial_budget": initial_budget,
-       "expences": expences  
-    }
+    data = {"initial_budget": initial_budget, "expences": expences}
     with open(filePath, "w") as file:
         json.dump(data, file, indent=4)
 
+
 def main():
     print("Welcome to the Budget App")
-    filePath = 'simple-projects/Budget tracker/budget_data.json'
-    
+    filePath = "simple-projects/Budget tracker/budget_data.json"
+
     # Load data from the file if available
     initial_budget, expences = load_budget_data(filePath)
-    
+
     if initial_budget == 0:  # No budget saved, ask user for input
         initial_budget = float(input("Enter your initial budget: "))
 
@@ -67,9 +71,9 @@ def main():
         else:
             print("Invalid choice, please try again.")
 
+
 if __name__ == "__main__":
     main()
-
 
 
 # Project: Budget Tracker App
