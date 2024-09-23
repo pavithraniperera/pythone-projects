@@ -1,0 +1,13 @@
+{
+    "initial_budget": 2000.0,
+    "expences": [
+        {
+            "description": "grocery",
+            "amount": 200.0
+        },
+        {
+            "description": "shopping",
+            "amount": 300.0
+        }
+    ]
+}
